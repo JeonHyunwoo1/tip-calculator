@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95088B752B32E96B0055354B /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 95088B742B32E96B0055354B /* CombineCocoa */; };
+		95088B782B32E9870055354B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 95088B772B32E9870055354B /* SnapKit */; };
+		95088B7A2B32E9870055354B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 95088B792B32E9870055354B /* SnapKit-Dynamic */; };
+		95088B7D2B32E9CD0055354B /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 95088B7C2B32E9CD0055354B /* CombineCocoa */; };
+		95088B802B32EA240055354B /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 95088B7F2B32EA240055354B /* SnapshotTesting */; };
+		95088B822B32EA3A0055354B /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 95088B812B32EA3A0055354B /* CombineCocoa */; };
 		9554C0E72A920ACF0098F2DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554C0E62A920ACF0098F2DE /* AppDelegate.swift */; };
 		9554C0E92A920ACF0098F2DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554C0E82A920ACF0098F2DE /* SceneDelegate.swift */; };
 		9554C0EB2A920ACF0098F2DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9554C0EA2A920ACF0098F2DE /* ViewController.swift */; };
@@ -56,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95088B752B32E96B0055354B /* CombineCocoa in Frameworks */,
+				95088B782B32E9870055354B /* SnapKit in Frameworks */,
+				95088B7A2B32E9870055354B /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95088B7D2B32E9CD0055354B /* CombineCocoa in Frameworks */,
+				95088B802B32EA240055354B /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +81,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95088B822B32EA3A0055354B /* CombineCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95088B7B2B32E9CD0055354B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9554C0DA2A920ACF0098F2DE = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +102,7 @@
 				9554C0FC2A920AD00098F2DE /* tip-calculatorTests */,
 				9554C1062A920AD00098F2DE /* tip-calculatorUITests */,
 				9554C0E42A920ACF0098F2DE /* Products */,
+				95088B7B2B32E9CD0055354B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +163,11 @@
 			dependencies = (
 			);
 			name = "tip-calculator";
+			packageProductDependencies = (
+				95088B742B32E96B0055354B /* CombineCocoa */,
+				95088B772B32E9870055354B /* SnapKit */,
+				95088B792B32E9870055354B /* SnapKit-Dynamic */,
+			);
 			productName = "tip-calculator";
 			productReference = 9554C0E32A920ACF0098F2DE /* tip-calculator.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +186,10 @@
 				9554C0FB2A920AD00098F2DE /* PBXTargetDependency */,
 			);
 			name = "tip-calculatorTests";
+			packageProductDependencies = (
+				95088B7C2B32E9CD0055354B /* CombineCocoa */,
+				95088B7F2B32EA240055354B /* SnapshotTesting */,
+			);
 			productName = "tip-calculatorTests";
 			productReference = 9554C0F92A920AD00098F2DE /* tip-calculatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -179,6 +208,9 @@
 				9554C1052A920AD00098F2DE /* PBXTargetDependency */,
 			);
 			name = "tip-calculatorUITests";
+			packageProductDependencies = (
+				95088B812B32EA3A0055354B /* CombineCocoa */,
+			);
 			productName = "tip-calculatorUITests";
 			productReference = 9554C1032A920AD00098F2DE /* tip-calculatorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -215,6 +247,11 @@
 				Base,
 			);
 			mainGroup = 9554C0DA2A920ACF0098F2DE;
+			packageReferences = (
+				95088B732B32E96B0055354B /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				95088B762B32E9870055354B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				95088B7E2B32EA240055354B /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 9554C0E42A920ACF0098F2DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -604,6 +641,66 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95088B732B32E96B0055354B /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+		95088B762B32E9870055354B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+		95088B7E2B32EA240055354B /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.15.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95088B742B32E96B0055354B /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95088B732B32E96B0055354B /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		95088B772B32E9870055354B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95088B762B32E9870055354B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		95088B792B32E9870055354B /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95088B762B32E9870055354B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		95088B7C2B32E9CD0055354B /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95088B732B32E96B0055354B /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		95088B7F2B32EA240055354B /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95088B7E2B32EA240055354B /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		95088B812B32EA3A0055354B /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95088B732B32E96B0055354B /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9554C0DB2A920ACF0098F2DE /* Project object */;
 }

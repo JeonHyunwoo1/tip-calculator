@@ -11,9 +11,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .yellow
+        
     }
 
 
 }
+
+//Main Target
+//https://github.com/CombineCommunity/CombineCocoa
+//https://github.com/SnapKit/SnapKit
+
+//Unit test Target
+//https://github.com/CombineCommunity/CombineCocoa
+//https://github.com/pointfreeco/swift-snapshot-testing
+
+//UI Test Target
+//https://github.com/CombineCommunity/CombineCocoa
 
