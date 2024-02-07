@@ -30,6 +30,8 @@
 		95AE99052B5513EF00C9E6BF /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE99042B5513EF00C9E6BF /* ThemeFont.swift */; };
 		95AE99082B55141600C9E6BF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE99072B55141600C9E6BF /* UIColor+Extension.swift */; };
 		95BBFF9D2B73194C0082AC05 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFF9C2B73194C0082AC05 /* AmountView.swift */; };
+		95BBFFA02B73790A0082AC05 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFF9F2B73790A0082AC05 /* Tip.swift */; };
+		95BBFFA22B73791E0082AC05 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFFA12B73791E0082AC05 /* HeaderView.swift */; };
 		95CAC9EE2B5E0EDF0066411B /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAC9ED2B5E0EDF0066411B /* LabelFactory.swift */; };
 		95CAC9F12B5E4C340066411B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAC9F02B5E4C340066411B /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		95AE99042B5513EF00C9E6BF /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		95AE99072B55141600C9E6BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		95BBFF9C2B73194C0082AC05 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		95BBFF9F2B73790A0082AC05 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		95BBFFA12B73791E0082AC05 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		95CAC9ED2B5E0EDF0066411B /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		95CAC9F02B5E4C340066411B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +143,7 @@
 		9554C0E52A920ACF0098F2DE /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				95BBFF9E2B7379030082AC05 /* model */,
 				95CAC9EC2B5E0ED70066411B /* factory */,
 				95AE99062B55140A00C9E6BF /* extension */,
 				95AE99002B5513DB00C9E6BF /* config */,
@@ -173,6 +178,7 @@
 		95AE98F52B5501C200C9E6BF /* view */ = {
 			isa = PBXGroup;
 			children = (
+				95BBFFA12B73791E0082AC05 /* HeaderView.swift */,
 				95AE98F62B5501CE00C9E6BF /* LogoView.swift */,
 				95AE98F82B55042C00C9E6BF /* ResultView.swift */,
 				95AE98FA2B55043600C9E6BF /* BillInputView.swift */,
@@ -199,6 +205,14 @@
 				95CAC9F02B5E4C340066411B /* UIView+Extension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		95BBFF9E2B7379030082AC05 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				95BBFF9F2B73790A0082AC05 /* Tip.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		95CAC9EC2B5E0ED70066411B /* factory */ = {
@@ -368,8 +382,10 @@
 				95AE99052B5513EF00C9E6BF /* ThemeFont.swift in Sources */,
 				9554C0E92A920ACF0098F2DE /* SceneDelegate.swift in Sources */,
 				95CAC9EE2B5E0EDF0066411B /* LabelFactory.swift in Sources */,
+				95BBFFA02B73790A0082AC05 /* Tip.swift in Sources */,
 				95AE98FF2B55045400C9E6BF /* SplitInputView.swift in Sources */,
 				95AE98FD2B55044200C9E6BF /* TipInputView.swift in Sources */,
+				95BBFFA22B73791E0082AC05 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
