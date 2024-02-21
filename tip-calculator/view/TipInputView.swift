@@ -51,9 +51,13 @@ class TipInputView: UIView {
         button.setTitle("Custom tip", for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
         button.backgroundColor = ThemeColor.primary
-        
         button.tintColor = .white
         button.addCornerRadius(radius: 8.0)
+        
+        button.tapPublisher.sink { [weak self] _ in
+            self?.handleCustomTipButton()
+        }.store(in: &cancellables)
+        
         return button
     }()
     
@@ -89,6 +93,7 @@ class TipInputView: UIView {
     init() {
         super.init(frame: .zero)
         layout()
+        observe()
         print("tip: \(tipSubject.value)")
     }
     
@@ -110,6 +115,73 @@ class TipInputView: UIView {
             make.width.equalTo(68)
             make.centerY.equalTo(buttonHStackView.snp.centerY)
         }
+    }
+    
+    private func handleCustomTipButton() {
+        let alertController: UIAlertController = {
+            let controller = UIAlertController(
+                title: "Enter custom tip",
+                message: nil,
+                preferredStyle: .alert)
+            controller.addTextField { textField in
+                textField.placeholder = "Make it generous!"
+                textField.keyboardType = .numberPad
+                textField.autocorrectionType = .no
+            }
+            
+            let cancelAction = UIAlertAction(
+                title: "Cancel",
+                style: .cancel)
+            let okAction = UIAlertAction(
+                title: "OK",
+                style: .default) { [weak self] _ in
+                    guard let text = controller.textFields?.first?.text, let value = Int(text) else { return }
+                    self?.tipSubject.send(.custom(value: value))
+                }
+            [okAction, cancelAction].forEach(controller.addAction(_:))
+            return controller
+        }()
+        parentViewController?.present(alertController, animated: true)
+    }
+    
+    private func observe() {
+        tipSubject.sink { [unowned self] tip in
+            resetView()
+            switch tip {
+            case .none: break
+            case .tenPercent:
+                tenPercentTipButton.backgroundColor = ThemeColor.secondary
+            case .fifteenPercent:
+                fifteenPercentTipButton.backgroundColor = ThemeColor.secondary
+            case .twentyPercent:
+                twentyPercentTipButton.backgroundColor = ThemeColor.secondary
+            case .custom(let value):
+                customTipButton.backgroundColor = ThemeColor.secondary
+                let text = NSMutableAttributedString(
+                    string: "$\(value)",
+                    attributes:[
+                        .font: ThemeFont.bold(ofSize: 20)
+                    ])
+                text.addAttributes([
+                    .font: ThemeFont.bold(ofSize: 14)
+                ], range: NSMakeRange(0, 1))
+                customTipButton.setAttributedTitle(text, for: .normal)
+            }
+        }.store(in: &cancellables)
+    }
+    
+    private func resetView() {
+        [tenPercentTipButton,
+         fifteenPercentTipButton,
+         twentyPercentTipButton,
+         customTipButton].forEach {
+            $0.backgroundColor = ThemeColor.primary
+        }
+        let text = NSMutableAttributedString(
+            string: "Custom tip",
+            attributes: [.font: ThemeFont.bold(ofSize: 20)])
+        customTipButton.setAttributedTitle(text, for: .normal)
+        
     }
     
     private func buildTipButton(tip: Tip) -> UIButton {
