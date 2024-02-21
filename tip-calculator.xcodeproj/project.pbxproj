@@ -38,6 +38,7 @@
 		95CAC9EE2B5E0EDF0066411B /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAC9ED2B5E0EDF0066411B /* LabelFactory.swift */; };
 		95CAC9F12B5E4C340066411B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CAC9F02B5E4C340066411B /* UIView+Extension.swift */; };
 		95CCD1732B85DB57006F7F06 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCD1722B85DB57006F7F06 /* UIResponder+Extension.swift */; };
+		95CCD1752B85E9B5006F7F06 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCD1742B85E9B5006F7F06 /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		95CAC9ED2B5E0EDF0066411B /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		95CAC9F02B5E4C340066411B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		95CCD1722B85DB57006F7F06 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		95CCD1742B85E9B5006F7F06 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				95CAC9F02B5E4C340066411B /* UIView+Extension.swift */,
 				9536BE752B84A548007F61B9 /* String+Extension.swift */,
 				95CCD1722B85DB57006F7F06 /* UIResponder+Extension.swift */,
+				95CCD1742B85E9B5006F7F06 /* Int+Extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				9536BE742B848FF2007F61B9 /* Result.swift in Sources */,
 				953E3D4A2B7C912A00D55487 /* CalculatorVM.swift in Sources */,
 				95CCD1732B85DB57006F7F06 /* UIResponder+Extension.swift in Sources */,
+				95CCD1752B85E9B5006F7F06 /* Int+Extension.swift in Sources */,
 				95BBFF9D2B73194C0082AC05 /* AmountView.swift in Sources */,
 				9536BE762B84A548007F61B9 /* String+Extension.swift in Sources */,
 				9554C0EB2A920ACF0098F2DE /* CalculatorVC.swift in Sources */,
