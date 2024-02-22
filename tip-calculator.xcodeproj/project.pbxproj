@@ -33,6 +33,8 @@
 		95AE99052B5513EF00C9E6BF /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE99042B5513EF00C9E6BF /* ThemeFont.swift */; };
 		95AE99082B55141600C9E6BF /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AE99072B55141600C9E6BF /* UIColor+Extension.swift */; };
 		95B130BE2B8716C0008DE26F /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B130BD2B8716C0008DE26F /* Double+Extension.swift */; };
+		95B130C12B8741B6008DE26F /* click.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 95B130C02B8741B6008DE26F /* click.m4a */; };
+		95B130C42B8741D3008DE26F /* AudioPlayerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B130C32B8741D3008DE26F /* AudioPlayerService.swift */; };
 		95BBFF9D2B73194C0082AC05 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFF9C2B73194C0082AC05 /* AmountView.swift */; };
 		95BBFFA02B73790A0082AC05 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFF9F2B73790A0082AC05 /* Tip.swift */; };
 		95BBFFA22B73791E0082AC05 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBFFA12B73791E0082AC05 /* HeaderView.swift */; };
@@ -84,6 +86,8 @@
 		95AE99042B5513EF00C9E6BF /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		95AE99072B55141600C9E6BF /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		95B130BD2B8716C0008DE26F /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		95B130C02B8741B6008DE26F /* click.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.m4a; sourceTree = "<group>"; };
+		95B130C32B8741D3008DE26F /* AudioPlayerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerService.swift; sourceTree = "<group>"; };
 		95BBFF9C2B73194C0082AC05 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		95BBFF9F2B73790A0082AC05 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		95BBFFA12B73791E0082AC05 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 		9554C0E52A920ACF0098F2DE /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				95B130C22B8741CA008DE26F /* service */,
+				95B130BF2B874196008DE26F /* resource */,
 				953E3D482B7C90F500D55487 /* view model */,
 				95BBFF9E2B7379030082AC05 /* model */,
 				95CAC9EC2B5E0ED70066411B /* factory */,
@@ -230,6 +236,22 @@
 				95B130BD2B8716C0008DE26F /* Double+Extension.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		95B130BF2B874196008DE26F /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				95B130C02B8741B6008DE26F /* click.m4a */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		95B130C22B8741CA008DE26F /* service */ = {
+			isa = PBXGroup;
+			children = (
+				95B130C32B8741D3008DE26F /* AudioPlayerService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 		95BBFF9E2B7379030082AC05 /* model */ = {
@@ -370,6 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B130C12B8741B6008DE26F /* click.m4a in Resources */,
 				9554C0F32A920AD00098F2DE /* LaunchScreen.storyboard in Resources */,
 				9554C0F02A920AD00098F2DE /* Assets.xcassets in Resources */,
 			);
@@ -408,6 +431,7 @@
 				95AE99022B5513E300C9E6BF /* ThemeColor.swift in Sources */,
 				95AE99082B55141600C9E6BF /* UIColor+Extension.swift in Sources */,
 				95AE98FB2B55043600C9E6BF /* BillInputView.swift in Sources */,
+				95B130C42B8741D3008DE26F /* AudioPlayerService.swift in Sources */,
 				95AE98F92B55042C00C9E6BF /* ResultView.swift in Sources */,
 				9554C0E72A920ACF0098F2DE /* AppDelegate.swift in Sources */,
 				95AE99052B5513EF00C9E6BF /* ThemeFont.swift in Sources */,
