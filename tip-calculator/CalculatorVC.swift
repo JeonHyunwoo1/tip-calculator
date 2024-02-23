@@ -59,7 +59,7 @@ class CalculatorVC: UIViewController {
         observe()
     }
     
-    private func bind() {
+    private func bind() {   // 연결해준다.
         
         let input = CalculatorVM.Input(
             billPublisher: billInputView.valuePublisher,
@@ -75,11 +75,26 @@ class CalculatorVC: UIViewController {
         }.store(in: &cancellables)
         
         output.resetCalculatorPublisher.sink { [unowned self] _ in
-            print("hey, reset the form please!")
+            billInputView.reset()
+            tipInputView.reset()
+            splitInputView.reset()
+            
+            UIView.animate(
+                withDuration: 0.1,
+                delay: 0,
+                usingSpringWithDamping: 5.0,
+                initialSpringVelocity: 0.5,
+                options: .curveEaseInOut) {
+                self.logoView.transform = .init(scaleX: 1.5, y: 1.5)
+                } completion: { _ in
+                    UIView.animate(withDuration: 0.1) {
+                        self.logoView.transform = .identity
+                    }
+                }
         }.store(in: &cancellables)
     }
     
-    private func observe() {
+    private func observe() {    // 그려준다
         viewTapPublisher.sink { [unowned self] value in
             print("view tap")
             view.endEditing(true)
